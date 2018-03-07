@@ -33,15 +33,7 @@ This documentation contains the following pages:
    rst_syntax
    exmplpckg
    todo
-   exmplpckg
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
 Features
 --------

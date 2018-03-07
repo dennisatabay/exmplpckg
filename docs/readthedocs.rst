@@ -18,5 +18,12 @@ repository that works with readthedocs (this one for example) to your own reposi
 and the ``.conf.py`` file to change the content. Of course you still have to link your repository on at `readthedocs.org`_ .
 This will not allow you to build your html files offline, but it should work for your online documentation.
 
+Using autodoc
+--------------
+In your project advanced settings, select ``Install your project inside a virtualenv using setup.py install`` and the path to your requirements file.
+(I am not 100 per cent sure if this is really necessary)
+
+
+
 .. _ReadtheDocs documentation: http://docs.readthedocs.io/en/latest/getting_started.html#sign-up-and-connect-an-external-account
 .. _readthedocs.org: https://readthedocs.org/

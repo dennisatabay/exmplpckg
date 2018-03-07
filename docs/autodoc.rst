@@ -49,15 +49,40 @@ Simply run
 	
 For our example, being in our ``docs`` folder, we can do this
 
-	$ sphinx-apidoc -o source\ ..
+	$ sphinx-apidoc -o . ..
 
-Be sure to set the -o outputdir that will contain the generated Sphinx source files to docs/source/. 
-This took me a while to figure out...
 	
 This will automatically create ``*.rst`` files for each module. You can find them in your 
-``docs\source`` folder. For our example, this generated  a ``exmplpckg.rst`` and a ``modules.rst`` file.
+``docs`` folder. For our example, this generated  a ``exmplpckg.rst`` and a ``modules.rst`` file.
 
-HOW TO LINK IT????
+Now I simply add the ``exmplpckg.rst`` to the toctree in my ``index.rst`` file. 
+
+.. code-block:: RST
+
+	This documentation contains the following pages:
+
+	.. toctree::
+	   :maxdepth: 1
+
+	   sphinx_start
+	   create_docs
+	   autodoc
+	   readthedocs
+	   rst_syntax
+	   exmplpckg
+	   todo
+
+
+You can see how the automated documentation
+looks like when selecting ``exmplpckg`` on the left.
+
+
+Create a steup.py and requirements.txt file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Create both files and add them to your main project folder. 
+autodoc on readthedocs will not work without them.
+(I am not 100 per cent sure if this is really necessary)
 
 
 How to document your code

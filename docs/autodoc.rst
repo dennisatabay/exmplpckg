@@ -5,7 +5,7 @@ Include docstrings from your code
 
 Sphinx allows you to `include documentation form docstrings`_ you have in your code.
 
-.. _include documentation form docstrings: http://www.sphinx-doc.org/en/master/ext/autodoc.html
+
 
 Python
 -------
@@ -59,17 +59,28 @@ apidoc alo created a ``modules.rst`` file, which I deleted because I won't use i
 
 :ref:`exmplpckg_apidoc` This is how it looks like for our example.
 
+
+How to document your code
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Please have a look at this `Example on Sphinx`_ and this `Guide to NumPy/SciPy Documentation`_
+
+
 Java
 -----
 
 This should also be possible using `javasphinx`_ . Maybe someone knowing Java can provide
 an example...
 
-
 R
 ---
 
 I suppose this is also possible for R. Feel free to try.
 
+
+
 .. _change it: http://www.sphinx-doc.org/en/stable/ext/autodoc.html
 .. _javasphinx: https://bronto.github.io/javasphinx/
+.. Example on Sphinx: http://www.sphinx-doc.org/en/stable/ext/example_numpy.html#example-numpy
+.. _Guide to NumPy/SciPy Documentation: https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt#common-rest-concepts
+.. _include documentation form docstrings: http://www.sphinx-doc.org/en/master/ext/autodoc.html

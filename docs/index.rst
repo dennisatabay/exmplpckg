@@ -1,7 +1,5 @@
-.. exmplpckg documentation master file, created by
-   sphinx-quickstart on Tue Mar  6 19:11:44 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. exmplpckg 
+
    
 .. module:: exmplpckg
 
@@ -51,10 +49,11 @@ Dependencies
 ------------
 
 * `numpy`_ for mathematical operations 
-* matplotlib for plotting
+* `matplotlib`_ for making plots
 
 
 
 .. _Wattsight: https://www.wattsight.com/
 .. _how to: http://stackoverflow.com/questions/17806673/where-shall-i-put-my-self-written-python-packages/17811151#17811151) 
 .. _numpy: http://www.numpy.org/
+.. _matplotlib: https://matplotlib.org/

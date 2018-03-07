@@ -55,12 +55,9 @@ Be sure to set the -o outputdir that will contain the generated Sphinx source fi
 This took me a while to figure out...
 	
 This will automatically create ``*.rst`` files for each module. You can find them in your 
-docs folder. For our example, this generated  a ``exmplpckg.rst`` file.
-We can now include it into our documentation and `change it`_ manually, if we want to.
-We treat it like any other .srt file that is part of our documentation.
-apidoc alo created a ``modules.rst`` file, which I deleted because I won't use it.
+``docs\source`` folder. For our example, this generated  a ``exmplpckg.rst`` and a ``modules.rst`` file.
 
-See the chapter This is how it looks like for our example.
+HOW TO LINK IT????
 
 
 How to document your code

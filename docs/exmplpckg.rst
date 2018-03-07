@@ -1,3 +1,5 @@
+.. _exmplpckg_apidoc:
+
 exmplpckg package
 =================
 

@@ -1,7 +1,7 @@
-.. exmplpckg 
+.. exmplpckg
 
-   
-.. module:: exmplpckg
+.. _index:
+
 
 Documetation with sphinx and readthedocs
 =========================================
@@ -17,19 +17,22 @@ Documetation with sphinx and readthedocs
 .. __: http://creativecommons.org/licenses/by/4.0/
 
 
-
-.. toctree::
-   :maxdepth: 1
-
-
 Contents
 =========
 
 This documentation contains the following pages:
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+   :maxdepth: 1
+
+   sphinx_start
+   create_docs
+   autodoc
+   readthedocs
+   rst_syntax
+   exmplpckg
+   todo
+
 
 
 Features
@@ -40,9 +43,9 @@ Features
 Get Started
 -----------
 
-1. `download`_ or clone (with `git`_) this repository to a directory of your choice.
-2. Copy the main folder to a directory which is already in python's search path or add the it to python's search path (sys.path) (`how to`_)
-3. Use it or have a look at the documentation
+1. Clone this repository to a directory of your choice.
+2. If you actually want to the package, copy the main folder to a directory which is already in python's search path or add the it to python's search path (sys.path) (`how to`_)
+3. Use it or just have a look at the documentation
 
 
 Dependencies

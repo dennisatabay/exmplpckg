@@ -1,0 +1,117 @@
+.. _start:
+
+Getting Started with Sphinx
+============================
+
+This chapter will show you how to get started with sphinx, based on the
+description from `getting started at readthedocs`_ and the official `install Sphinx`_ 
+instructions.
+
+
+Install and Quickstart
+-----------------------
+
+
+There is `a screencast`_ that will help you get started if you prefer.
+
+Sphinx is a tool that makes it easy to create beautiful documentation.
+Assuming you have Python_ already, `install Sphinx`_::
+
+    $ pip install sphinx sphinx-autobuild
+
+Create a directory inside your project to hold your docs::
+
+    $ cd /path/to/exmplpckg
+    $ mkdir docs
+
+Run ``sphinx-quickstart`` in there::
+
+    $ cd docs
+    $ sphinx-quickstart
+
+This quick start will walk you through creating the basic configuration; in most cases, you
+can just accept the [defaults] or choose an project name/version. If you want to include documentation from the docstrings of your code,
+choose `y` here! 
+
+> Root path for the documentation [.]: 	
+> Separate source and build directories (y/N) [n]:
+> Name prefix for templates and static dir [_]:
+> Project name: 	an_example_pypi_project
+> Author name(s): 	Your Name
+> Project version: 	0.0.1
+> Project release [0.0.1]:
+> Source file suffix [.rst]:
+> Name of your master document (without suffix) [index]: 
+> autodoc: automatically insert docstrings from modules (y/N) [n]: 	y
+> doctest: automatically test code snippets in doctest blocks (y/N) [n]: 
+> intersphinx: link between Sphinx documentation of different projects (y/N) [n]:
+> todo: write “todo” entries that can be shown or hidden on build (y/N) [n]:
+> coverage: checks for documentation coverage (y/N) [n]:
+> pngmath: include math, rendered as PNG images (y/N) [n]: 
+> jsmath: include math, rendered in the browser by JSMath (y/N) [n]:
+> ifconfig: conditional inclusion of content based on config values (y/N) [n]:
+> Create Makefile? (Y/n) [y]:
+> Create Windows command file? (Y/n) [y]:
+
+
+When it's done, you'll have an ``index.rst``, a
+``conf.py`` and some other files. Add these to your git revision control.
+
+Install and Quickstart
+-----------------------
+
+Edit your conf.py settings
+---------------------------
+
+After running `sphinx-quickstart`, your docs folder should contain a ``conf.py`` file.
+This file contains all the settings you just choose during the quickstart. If you want to change them,
+just do it within this file. It is well documented and most of the parameters should be 
+clear.
+
+html theme
+^^^^^^^^^^
+
+You can also specify some additional settings, such as the html theme. Just choose one of
+the `available html themes`_ . You should find this line in your ``conf.py`` file::
+
+	html_theme = 'alabasta'
+
+For readthedocs, we would like to use the readthedocs default theme ``sphinx_rtd_theme`` . We could set it here, but
+then we have to install it to use it locally (pip install sphinx_rtd_theme). Instead we just outcomment the theme
+setting line. Now Sphinx will use its default (alabasta) when building the html locally and readthedocs
+will use its default when importing the documentation::
+
+	#html_theme = 'alabasta'
+
+.. _math_label:
+	
+Math code
+^^^^^^^^^^^^
+
+To wirte proper math code in our documentation, we need to add 
+the sphinx.ext.mathjax extension. This extension uses the JavaScript 
+package MathJax to transform the LaTeX markup to readable math live in the browser.
+If we also want to use autodoc, our ``conf.py`` file should contain this::
+
+	extensions = ['sphinx.ext.autodoc', 'sphinx.ext.mathjax']
+
+See also `Math support in sphinx`_ .
+
+
+More changes
+^^^^^^^^^^^^^^
+
+Usually I don't change more than that within ``conf.py`` . If  you want to change more, see the `sphinx documentation for config.py`_
+
+.. note:: See the instructions how to edit your conf.py file if you want to :ref:`autodoc`
+  
+
+.. _a screencast: https://www.youtube.com/watch?feature=player_embedded&v=oJsUvBQyHBs
+.. _getting started at readthedocs: http://docs.readthedocs.io/en/latest/getting_started.html#
+.. _install Sphinx: http://sphinx-doc.org/latest/install.html
+.. _Python: https://www.python.org/
+.. _reStructuredText: http://sphinx-doc.org/rest.html
+.. _this template: http://docs.writethedocs.org/guide/writing/beginners-guide-to-docs/#id1
+.. _available html themes: http://www.sphinx-doc.org/en/stable/theming.html#builtin-themes
+.. _sphinx documentation for config.py: http://www.sphinx-doc.org/en/stable/config.html
+.. _Math support in sphinx: http://www.sphinx-doc.org/en/master/ext/math.html

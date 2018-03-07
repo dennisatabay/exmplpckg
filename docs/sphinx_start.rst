@@ -33,24 +33,42 @@ This quick start will walk you through creating the basic configuration; in most
 can just accept the [defaults] or choose an project name/version. If you want to include documentation from the docstrings of your code,
 choose `y` here! 
 
-> Root path for the documentation [.]: 	
+> Root path for the documentation [.]:
+
 > Separate source and build directories (y/N) [n]:
+
 > Name prefix for templates and static dir [_]:
+
 > Project name: 	an_example_pypi_project
+
 > Author name(s): 	Your Name
+
 > Project version: 	0.0.1
+
 > Project release [0.0.1]:
+
 > Source file suffix [.rst]:
+
 > Name of your master document (without suffix) [index]: 
+
 > autodoc: automatically insert docstrings from modules (y/N) [n]: 	y
+
 > doctest: automatically test code snippets in doctest blocks (y/N) [n]: 
+
 > intersphinx: link between Sphinx documentation of different projects (y/N) [n]:
+
 > todo: write “todo” entries that can be shown or hidden on build (y/N) [n]:
+
 > coverage: checks for documentation coverage (y/N) [n]:
+
 > pngmath: include math, rendered as PNG images (y/N) [n]: 
-> jsmath: include math, rendered in the browser by JSMath (y/N) [n]:
+
+> jsmath: include math, rendered in the browser by JSMath (y/N) [n]: y
+
 > ifconfig: conditional inclusion of content based on config values (y/N) [n]:
+
 > Create Makefile? (Y/n) [y]:
+
 > Create Windows command file? (Y/n) [y]:
 
 

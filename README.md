@@ -9,3 +9,4 @@ create a documentation using [sphinx](http://www.sphinx-doc.org/en/master/) and 
 You can create a badge for your documentation showing the status. If status is "failing", 
 you can sign in to and have a look at the latest build (https://readthedocs.org/projects/YOURPROJECT/builds/)
 
+[![Documentation Status](https://readthedocs.org/projects/exmplpckg/badge/?version=latest)](http://exmplpckg.readthedocs.io/en/latest/?badge=latest)

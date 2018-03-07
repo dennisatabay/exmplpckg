@@ -34,6 +34,12 @@ This documentation contains the following pages:
    todo
 
 
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
 
 Features
 --------

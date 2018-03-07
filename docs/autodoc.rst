@@ -49,15 +49,18 @@ Simply run
 	
 For our example, being in our ``docs`` folder, we can do this
 
-	$ sphinx-apidoc -o . ..
+	$ sphinx-apidoc -o source\ ..
+
+Be sure to set the -o outputdir that will contain the generated Sphinx source files to docs/source/. 
+This took me a while to figure out...
 	
-This will automatically create *.rst files for each module. You can find them in your 
+This will automatically create ``*.rst`` files for each module. You can find them in your 
 docs folder. For our example, this generated  a ``exmplpckg.rst`` file.
 We can now include it into our documentation and `change it`_ manually, if we want to.
 We treat it like any other .srt file that is part of our documentation.
 apidoc alo created a ``modules.rst`` file, which I deleted because I won't use it.
 
-:ref:`exmplpckg_apidoc` This is how it looks like for our example.
+See the chapter This is how it looks like for our example.
 
 
 How to document your code
@@ -81,6 +84,6 @@ I suppose this is also possible for R. Feel free to try.
 
 .. _change it: http://www.sphinx-doc.org/en/stable/ext/autodoc.html
 .. _javasphinx: https://bronto.github.io/javasphinx/
-.. Example on Sphinx: http://www.sphinx-doc.org/en/stable/ext/example_numpy.html#example-numpy
+.. _Example on Sphinx: http://www.sphinx-doc.org/en/stable/ext/example_numpy.html#example-numpy
 .. _Guide to NumPy/SciPy Documentation: https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt#common-rest-concepts
 .. _include documentation form docstrings: http://www.sphinx-doc.org/en/master/ext/autodoc.html

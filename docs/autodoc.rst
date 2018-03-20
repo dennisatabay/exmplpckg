@@ -14,23 +14,23 @@ Setting up autodoc
 ^^^^^^^^^^^^^^^^^^^^
 
 To make autodoc available, you have to make sure that ``sphinx.ext.autodoc`` is included in your extensions
-within the ``conf.py`` file. If you selected this option during quickstart, you should find the following line 
-in your ``conf.py`` file.::
+within the ``conf.py`` file. ::
 
-	extensions = ['sphinx.ext.autodoc']
-	
-If we also want to use mathjax for displaying proper math code, it should look like this::
-
-	extensions = ['sphinx.ext.autodoc', 'sphinx.ext.mathjax']
-	
+	extensions = ['sphinx.ext.autodoc'
+                  ...
+                  ]
+		
 Now you have to make sure, that your python interpreter can find your source code to include the docstrings.
 Therefore you have to add the folder containing our code to the python sys.path variable.
-If your conf.py file is in ``\..\myrepo\docs`` and your code in ``\..\myrepo\packagefolder\`` , you add these three line
-to your ``conf.py`` file::
+If your conf.py file is in ``\..\myrepo\docs`` and your code in ``\..\myrepo\packagefolder\`` , you add these five line
+to your ``conf.py`` file (somehow local sphinx and readthedocs differ here in reading this correctly,
+but if I add these three versions, it works for both)::
 
-	import os
-	import sys
-	sys.path.insert(0, os.path.abspath(r'..'))
+    import os
+    import sys
+    sys.path.insert(0, os.path.abspath('.'))
+    sys.path.insert(0, os.path.abspath('..'))
+    sys.path.insert(0, os.path.abspath('../'))
 
 Make sure your ``packagefolder`` folder contains a ``__init__.py`` so it is defined as a package.
 
@@ -76,6 +76,33 @@ Now I simply add the ``exmplpckg.rst`` to the toctree in my ``index.rst`` file.
 You can see how the automated documentation
 looks like when selecting ``exmplpckg`` on the left.
 
+Include docstrings for specific modules/classes/methods/functions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In addition (or instead of) creating the ``*.rst`` automatically for each module, you can also
+insert the docstrings of a specific module, class, method, attribute or function anywhere in your
+documentaion. You can also always link to an specific documented module, class,...
+
+
+You can for example link to the attribute :attr:`exmplpckg.base.LinearFunction.m` , or in short 
+:attr:`~exmplpckg.base.LinearFunction.m` of the 
+class :class:`exmplpckg.base.LinearFunction` (or short :class:`~exmplpckg.base.LinearFunction` .
+
+And you can show the docstring of the :class:`~exmplpckg.base.LinearFunction` here:
+
+.. autoclass:: exmplpckg.base.LinearFunction
+   :noindex:
+
+Or just the docstring of its method :meth:`~exmplpckg.base.LinearFunction.fit`
+
+.. automethod:: exmplpckg.base.LinearFunction.fit
+   :noindex:
+
+
+For both, you should see the source code, when selecting ``source`` on the right.
+   
+Have a look at the sphinx `autodoc documentation`_ for more options.
+
 
 Create a steup.py and requirements.txt file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -91,6 +118,9 @@ How to document your code
 Please have a look at this `Example on Sphinx`_ and this `Guide to NumPy/SciPy Documentation`_
 
 
+
+
+
 Java
 -----
 
@@ -104,7 +134,7 @@ I suppose this is also possible for R. Feel free to try.
 
 
 
-.. _change it: http://www.sphinx-doc.org/en/stable/ext/autodoc.html
+.. _autodoc documentation: http://www.sphinx-doc.org/en/stable/ext/autodoc.html
 .. _javasphinx: https://bronto.github.io/javasphinx/
 .. _Example on Sphinx: http://www.sphinx-doc.org/en/stable/ext/example_numpy.html#example-numpy
 .. _Guide to NumPy/SciPy Documentation: https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt#common-rest-concepts

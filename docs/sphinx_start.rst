@@ -36,20 +36,22 @@ choose **y** here! Also select **y** for include math, rendered in the browser b
 * Root path for the documentation [.]:
 * Separate source and build directories (y/N) [n]:
 * Name prefix for templates and static dir [_]:
-* Project name: 	an_example_pypi_project
-* Author name(s): 	Your Name
-* Project version: 	0.0.1
+* Project name: 	**project name**
+* Author name(s): 	**Your Name**
+* Project version: 	(0.0.1)
 * Project release [0.0.1]:
 * Source file suffix [.rst]:
 * Name of your master document (without suffix) [index]: 
-* autodoc: automatically insert docstrings from modules (y/N) [n]: 	y
+* epub: Do you want to use the epub builder (y/n) [n]:
+* autodoc: automatically insert docstrings from modules (y/N) [n]: 	**y**
 * doctest: automatically test code snippets in doctest blocks (y/N) [n]: 
 * intersphinx: link between Sphinx documentation of different projects (y/N) [n]:
 * todo: write “todo” entries that can be shown or hidden on build (y/N) [n]:
 * coverage: checks for documentation coverage (y/N) [n]:
-* pngmath: include math, rendered as PNG images (y/N) [n]: 
-* jsmath: include math, rendered in the browser by JSMath (y/N) [n]: y
+* pngmath: include math, rendered as PNG images (y/N) [n]: **y**
+* jsmath: include math, rendered in the browser by JSMath (y/N) [n]: **y**
 * ifconfig: conditional inclusion of content based on config values (y/N) [n]:
+* viewcode: include links to the source code of documented Python objects (y/n) [n]: **y**
 * Create Makefile? (Y/n) [y]:
 * Create Windows command file? (Y/n) [y]:
 
@@ -57,8 +59,6 @@ choose **y** here! Also select **y** for include math, rendered in the browser b
 When it's done, you'll have an ``index.rst``, a
 ``conf.py`` and some other files. Add these to your git revision control.
 
-Install and Quickstart
------------------------
 
 Edit your conf.py settings
 ---------------------------
@@ -85,17 +85,38 @@ will use its default when importing the documentation::
 
 .. _math_label:
 	
-Math code
+Extension
 ^^^^^^^^^^^^
 
-To wirte proper math code in our documentation, we need to add 
-the sphinx.ext.mathjax extension. This extension uses the JavaScript 
+Your config.py document contains one (or more) lines defining the sphinx extensions. After running 
+sphinx quickstart, it shoul look like this::
+
+    extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.viewcode',
+    ]
+
+
+``sphinx.ext.autodoc`` enables auto documentation (see :ref:`autodoc`)
+
+To ``sphinx.ext.mathjax`` extension is needed to write proper math code. This extension uses the JavaScript 
 package MathJax to transform the LaTeX markup to readable math live in the browser.
-If we also want to use autodoc, our ``conf.py`` file should contain this::
-
-	extensions = ['sphinx.ext.autodoc', 'sphinx.ext.mathjax']
-
 See also `Math support in sphinx`_ .
+
+``sphinx.ext.viewcode`` makes it possible to link to your source code from the documentation
+
+I usually also add one extension manually, the ``sphinx.ext.napoleon`` extension, which allows you to
+write your docstrings in more readable style, that is still recognized by sphinx (http://www.sphinx-doc.org/en/master/ext/napoleon.html)
+
+So my config.py extensions look like this::
+
+    extensions = [
+        'sphinx.ext.autodoc',
+        'sphinx.ext.mathjax',
+        'sphinx.ext.viewcode',
+        'sphinx.ext.napoleon'
+    ]
 
 
 More changes
@@ -103,7 +124,6 @@ More changes
 
 Usually I don't change more than that within ``conf.py`` . If  you want to change more, see the `sphinx documentation for config.py`_
 
-.. note:: See the instructions how to edit your conf.py file if you want to :ref:`autodoc`
   
 
 .. _a screencast: https://www.youtube.com/watch?feature=player_embedded&v=oJsUvBQyHBs

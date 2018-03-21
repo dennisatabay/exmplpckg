@@ -91,10 +91,13 @@ class :class:`exmplpckg.base.LinearFunction` (or short :class:`~exmplpckg.base.L
 And you can show the docstring of the :class:`~exmplpckg.base.LinearFunction` here:
 
 .. autoclass:: exmplpckg.base.LinearFunction
+    :noindex:
+
 
 Or just the docstring of its method :meth:`~exmplpckg.base.LinearFunction.fit`
 
 .. automethod:: exmplpckg.base.LinearFunction.fit
+    :noindex:
 
 
 For both, you should see the source code, when selecting ``source`` on the right.

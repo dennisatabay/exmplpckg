@@ -79,5 +79,5 @@ Here you can find a `list of documentations`_ you can get some inspiration from.
 
 
 
-.. list of documentations: https://github.com/PharkMillups/beautiful-docs
+.. _list of documentations: https://github.com/PharkMillups/beautiful-docs
 .. _reStructuredText: http://sphinx-doc.org/rest.html

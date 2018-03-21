@@ -32,6 +32,7 @@ This documentation contains the following pages:
    readthedocs
    rst_syntax
    exmplpckg
+   packages
    todo
 
 

@@ -17,7 +17,7 @@ There is `a screencast`_ that will help you get started if you prefer.
 Sphinx is a tool that makes it easy to create beautiful documentation.
 Assuming you have Python_ already, `install Sphinx`_::
 
-    $ pip install sphinx sphinx-autobuild
+    $ pip install -U sphinx
 
 Create a directory inside your project to hold your docs::
 
@@ -109,13 +109,17 @@ See also `Math support in sphinx`_ .
 I usually also add one extension manually, the ``sphinx.ext.napoleon`` extension, which allows you to
 write your docstrings in more readable style, that is still recognized by sphinx (http://www.sphinx-doc.org/en/master/ext/napoleon.html)
 
+And if your code is written in java and you want to provide auto documentation here, you need to add ``javasphinx`` .
+(make sure it is installed and added to the requirements)
+
 So my config.py extensions look like this::
 
     extensions = [
         'sphinx.ext.autodoc',
         'sphinx.ext.mathjax',
         'sphinx.ext.viewcode',
-        'sphinx.ext.napoleon'
+        'sphinx.ext.napoleon',
+        'javasphinx'
     ]
 
 

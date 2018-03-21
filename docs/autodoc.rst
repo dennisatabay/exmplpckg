@@ -132,13 +132,13 @@ thi `How to Write Doc Comments for the Javadoc Tool`_ article for syntax example
 
 .. note:: As far as I understand, the java code has to be defined as a package to use javasphinx-apidoc
 
-Create a ``docs`` folder and initial ``*.rst`` file following :ref:start
+1. Create a ``docs`` folder and initial ``*.rst`` file following :ref:`start`
 
-Install javasphinx, if not already installed
+2. Install javasphinx, if not already installed
 
     $ pip install javasphinx
 
-Use ``javasphinx-apidoc`` , which is similar to ``sphinx-apidoc``
+3. Use ``javasphinx-apidoc`` , which is similar to ``sphinx-apidoc``
 
 $ javasphinx-apidoc -o <outputdir> <sourcedir>
 	
@@ -150,7 +150,7 @@ This will create a file called ``packages.rst`` and a folder ``"package_name"`` 
 within this folder. For our example this is the package ``my_java_package``. The folder again contains some ``*.rst`` files
 whith the parsed docstrings from your java code.
 
-We can simply add the ``packages.rst`` to our index toctree. You can see the result when selecting ``Javadoc`` on the left.
+4. We can simply add the ``packages.rst`` to our index toctree. You can see the result when selecting ``Javadoc`` on the left.
 
 .. code-block:: RST
 

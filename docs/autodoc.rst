@@ -16,8 +16,8 @@ Setting up autodoc
 To make autodoc available, you have to make sure that ``sphinx.ext.autodoc`` is included in your extensions
 within the ``conf.py`` file. ::
 
-	extensions = ['sphinx.ext.autodoc'
-                  ...
+	extensions = ['sphinx.ext.autodoc',
+                  more_extensions,
                   ]
 		
 Now you have to make sure, that your python interpreter can find your source code to include the docstrings.
@@ -91,12 +91,10 @@ class :class:`exmplpckg.base.LinearFunction` (or short :class:`~exmplpckg.base.L
 And you can show the docstring of the :class:`~exmplpckg.base.LinearFunction` here:
 
 .. autoclass:: exmplpckg.base.LinearFunction
-   :noindex:
 
 Or just the docstring of its method :meth:`~exmplpckg.base.LinearFunction.fit`
 
 .. automethod:: exmplpckg.base.LinearFunction.fit
-   :noindex:
 
 
 For both, you should see the source code, when selecting ``source`` on the right.

@@ -132,7 +132,7 @@ thi `How to Write Doc Comments for the Javadoc Tool`_ article for syntax example
 
 .. note:: As far as I understand, the java code has to be defined as a package to use javasphinx-apidoc
 
-1. Create a ``docs`` folder and initial ``*.rst`` file following :ref:`start`
+1. Create a ``docs`` folder with an ``index.rst`` and ``config.py`` file following :ref:`start`
 
 2. Install javasphinx, if not already installed
 
@@ -165,7 +165,7 @@ whith the parsed docstrings from your java code.
 	   readthedocs
 	   rst_syntax
 	   exmplpckg
-       packages
+	   packages
 	   todo
 
 

@@ -8,5 +8,6 @@ setup(
     name='exmplpckg',
     author='Dennis',
     install_requires=requirements,
-    packages=find_packages()
+    packages=find_packages(),
+    include_package_data=True
 )

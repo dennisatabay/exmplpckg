@@ -20,6 +20,13 @@ exmplpckg\.plot module
     :undoc-members:
     :show-inheritance:
 
+exmplpckg\.get_settings module
+----------------------
+
+.. automodule:: exmplpckg.get_settings
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 Module contents
 ---------------

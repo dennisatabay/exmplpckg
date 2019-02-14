@@ -1,4 +1,5 @@
 from distutils.core import setup
+from setuptools import find_packages
 
 with open('requirements.txt') as f:
     requirements = f.read().splitlines()
@@ -6,5 +7,6 @@ with open('requirements.txt') as f:
 setup(
     name='exmplpckg',
     author='Dennis',
-    install_requires=requirements
+    install_requires=requirements,
+    packages=find_packages()
 )
